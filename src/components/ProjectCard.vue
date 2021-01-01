@@ -4,8 +4,8 @@
          <h3 @click="togglecard">{{project.title}}</h3>
          <div class="icons">
              <span class="material-icons">edit</span>
-             <span class="material-icons">delete</span>
-             <span class="material-icons">done</span>
+             <span @click="deleteproject" class="material-icons">delete</span>
+             <span @click="togglecomplete" class="material-icons">done</span>
          </div>
      </div>
      <div class="details" v-if="showcard">
@@ -20,11 +20,26 @@ export default {
     data(){
         return{
             showcard: false,
+            urldel: "http://localhost:3000/projects/"+ this.project.id,
         }
     },
     methods:{
         togglecard(){
             this.showcard= !this.showcard
+        },
+        deleteproject(){
+            //do a delete request to the database
+            fetch(this.urldel,{method: 'DELETE'})
+            .then(() =>{this.$emit('delete', this.project.id)})
+            .catch(err => console.log(err.message))
+        },
+        togglecomplete(){
+            //do a patch request because it is used for updation
+            fetch(this.urldel,{
+                method: 'PATCH',
+                headers: {'content-Type': 'application/json'},
+                body: JSON.stringify({complete: !this.project.complete})
+            }).then(()=> this.$emit('complete', this.project.id))
         }
     }
 }
