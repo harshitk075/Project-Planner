@@ -1,0 +1,16 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "title": "Create new homepage banner",
+        "details": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim excepturi ullam, dolore iusto, beatae mollitia omnis molestiae numquam, quam eligendi placeat et itaque laudantium a laboriosam possimus reprehenderit totam quo aperiam ratione assumenda? Expedita voluptate unde ad ducimus facilis. Non nesciunt ea rem illum reprehenderit quia cumque qui adipisci! Eius inventore sapiente voluptates quisquam earum ex aliquam voluptatem, enim hic omnis. Ab laudantium commodi enim veniam dolores, reprehenderit, cupiditate, quae consequatur a asperiores autem laboriosam omnis? Exercitationem incidunt aperiam quam ipsa animi. Recusandae eos veniam dolor deserunt maxime ipsa quia delectus expedita facilis! Fugiat dignissimos necessitatibus facilis doloremque excepturi magnam.",
+        "complete": false
+      },
+      {
+        "id": 2,
+        "title": "Make marketing email",
+        "details": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim excepturi ullam, dolore iusto, beatae mollitia omnis molestiae numquam, quam eligendi placeat et itaque laudantium a laboriosam possimus reprehenderit totam quo aperiam ratione assumenda? Expedita voluptate unde ad ducimus facilis. Non nesciunt ea rem illum reprehenderit quia cumque qui adipisci! Eius inventore sapiente voluptates quisquam earum ex aliquam voluptatem, enim hic omnis. Ab laudantium commodi enim veniam dolores, reprehenderit, cupiditate, quae consequatur a asperiores autem laboriosam omnis? Exercitationem incidunt aperiam quam ipsa animi. Recusandae eos veniam dolor deserunt maxime ipsa quia delectus expedita facilis! Fugiat dignissimos necessitatibus facilis doloremque excepturi magnam.",
+        "complete": true
+      }
+    ]
+  }

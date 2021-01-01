@@ -1,18 +1,29 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div v-if="projects.length">
+      <div v-for="project in projects" :key='project.id'>
+        <project_card :project='project' />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import Project_card from '../components/ProjectCard.vue'
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  components: {Project_card},
+  data(){
+    return{
+      projects: [],
+    }
+  },
+  mounted(){
+    //fetch the projects
+    fetch('http://localhost:3000/projects')
+    .then(res => res.json())
+    .then(data => this.projects=data)
+    .catch(err=> console.warn(err.message))
   }
 }
 </script>
